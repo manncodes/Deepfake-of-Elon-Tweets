@@ -8,7 +8,7 @@ from keras_gpt_2 import load_trained_model_from_checkpoint, get_bpe_from_files, 
 
 app = Flask(__name__)
     
-model_folder = 'checkpoint/run1'    
+model_folder = ''    
 config_path = os.path.join(model_folder, 'hparams.json')
 checkpoint_path = os.path.join(model_folder, 'model-1000')
 encoder_path = os.path.join(model_folder, 'encoder.json')
@@ -21,7 +21,7 @@ def index():
 def generate_op(text):
     print('Generate text...')
     #output = generate(model, bpe, ['From the day forth, my arm'], length=20, top_k=1)
-    output = generate(model, bpe, [str(text)], length=20, top_k=1)
+    output = generate(model, bpe, [str(text)], length=20, top_k=40)
     return output
 
 @app.route('/', methods=['POST'])
