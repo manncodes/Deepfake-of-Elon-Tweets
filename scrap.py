@@ -6,9 +6,9 @@ import time
 import csv
 import io
 import pprint as pp
+import pandas as pd
 
-
-path_to_chromedriver ="C:\\Users\\kishi\\Downloads\\chromedriver_win32\\chromedriver"            #enter path of chromedriver
+path_to_chromedriver ="C:\\Users\\MANN PATEL\\Downloads\\chromedriver_win32\\chromedriver"            #enter path of chromedriver
 browser = webdriver.Chrome(executable_path = path_to_chromedriver)
 
 
@@ -38,6 +38,7 @@ def tweet_scroller(url):
 
     return html
 
+
 if __name__ == '__main__':
         
         all_tweets = []
@@ -57,4 +58,15 @@ if __name__ == '__main__':
 
                 all_tweets.append({"id": tweet_id, "text": tweet_text})
 
-        print(all_tweets)
+        #print(all_tweets)
+        
+        df  = pd.DataFrame(all_tweets)
+        
+        df.to_csv('elon_tweets.csv',index=False)
+        
+              
+        
+        
+
+            
+          
