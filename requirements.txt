@@ -4,3 +4,4 @@ flask
 tweepy
 keras
 keras_gpt_2
+tensorflow
