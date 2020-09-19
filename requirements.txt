@@ -1,3 +1,5 @@
+gunicorn
+Jinja2
 flask
 tweepy
 keras
