@@ -36,7 +36,7 @@ decorator==4.4.1
 defusedxml==0.6.0
 demjson==2.2.4
 detector==1.0
-Django==3.0.3
+Django==3.0.7
 en==0.0.1
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.0/en_core_web_sm-2.3.0.tar.gz
 entrypoints==0.3
